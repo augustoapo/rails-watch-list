@@ -1,0 +1,26 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random);">
+  <div class="container">
+    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+
+<div class="container">
+<h1 class = "text-center">Lists</h1>
+
+
+<div class="row justify-content-center">
+<% @lists.each do |list| %>
+  <%= link_to list_path(list) do %>
+  <div class="card-category mx-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+  <%= list.name %>
+  </div>
+  <% end %>
+
+<% end %>
+</div>
+<br>
+<p><%= link_to 'Create List', new_list_path, class: "btn btn-primary" %></p>
+
+</div>

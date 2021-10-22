@@ -1,0 +1,6 @@
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+    <!-- adds bootstrap button  -->
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
